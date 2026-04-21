@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沉浸式虚拟展览 | 陈梓琦 Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">CZ.</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">首页</a></li>
+                <li><a href="index.html#about" class="nav-link">关于</a></li>
+                <li><a href="index.html#portfolio" class="nav-link active">作品集</a></li>
+                <li><a href="index.html#contact" class="nav-link">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="project-detail">
+        <div class="container">
+            <div class="back-link">
+                <a href="index.html#portfolio"><i class="fas fa-arrow-left"></i><span>返回作品集</span></a>
+            </div>
+            <header class="project-header">
+                <div class="project-meta">
+                    <span class="category">VR/AR</span>
+                    <span class="year">2024</span>
+                </div>
+                <h1 class="project-title">沉浸式虚拟展览</h1>
+                <p class="project-subtitle">基于VR技术的虚拟艺术展览平台，打造身临其境的观展体验</p>
+                <div class="project-tech-stack">
+                    <span class="tech-tag">Unity</span>
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">VR SDK</span>
+                    <span class="tech-tag">Multiplayer</span>
+                    <span class="tech-tag">Photon</span>
+                </div>
+            </header>
+            <section class="project-gallery">
+                <div class="gallery-main">
+                    <img src="images/projects/project6/image1.jpg" alt="项目主图" onerror="this.parentElement.style.background='linear-gradient(135deg, #C9A9A6 0%, #8FAE8A 100%)'; this.style.display='none'">
+                </div>
+                <div class="gallery-thumbs">
+                    <div class="thumb active">
+                        <img src="images/projects/project6/image1.jpg" alt="缩略图1" onerror="this.parentElement.style.background='linear-gradient(135deg, #C9A9A6 0%, #8FAE8A 100%)'">
+                    </div>
+                    <div class="thumb">
+                        <img src="images/projects/project6/image2.jpg" alt="缩略图2" onerror="this.parentElement.style.background='linear-gradient(135deg, #8FAE8A 0%, #C9A9A6 100%)'">
+                    </div>
+                    <div class="thumb">
+                        <img src="images/projects/project6/image3.jpg" alt="缩略图3" onerror="this.parentElement.style.background='linear-gradient(135deg, #7BA7BC 0%, #C9A9A6 100%)'">
+                    </div>
+                    <div class="thumb">
+                        <img src="images/projects/project6/image4.jpg" alt="缩略图4" onerror="this.parentElement.style.background='linear-gradient(135deg, #C9A9A6 0%, #7BA7BC 100%)'">
+                    </div>
+                </div>
+            </section>
+            <section class="project-content">
+                <div class="content-section">
+                    <h2>项目概述</h2>
+                    <p>这是一个突破时空限制的虚拟艺术展览平台，用户通过VR设备可以进入精心设计的虚拟展厅，欣赏来自世界各地的艺术作品。平台支持多人在线参观，用户可以与其他观众实时交流，分享观展感受。</p>
+                    <p>每个展厅都经过精心设计，结合空间音效和互动元素，为观众创造沉浸式的艺术体验。无论是经典名作还是当代艺术，都能在这里找到最佳的展示方式。</p>
+                </div>
+                <div class="content-section">
+                    <h2>核心功能</h2>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i><div><strong>虚拟展厅</strong><p>多个主题展厅，精美的3D环境和灯光效果</p></div></li>
+                        <li><i class="fas fa-check-circle"></i><div><strong>多人在线</strong><p>支持最多50人同时在线，语音交流和文字聊天</p></div></li>
+                        <li><i class="fas fa-check-circle"></i><div><strong>作品详情</strong><p>点击作品查看详细信息、创作背景和艺术评论</p></div></li>
+                        <li><i class="fas fa-check-circle"></i><div><strong>导览系统</strong><p>AI智能导览，个性化推荐参观路线</p></div></li>
+                        <li><i class="fas fa-check-circle"></i><div><strong>社交互动</strong><p>点赞、收藏、分享功能，建立艺术社区</p></div></li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h2>技术实现</h2>
+                    <div class="tech-grid">
+                        <div class="tech-card"><i class="fas fa-vr-cardboard"></i><h3>VR引擎</h3><p>Unity 3D + Oculus SDK，高性能渲染</p></div>
+                        <div class="tech-card"><i class="fas fa-users"></i><h3>多人联机</h3><p>Photon网络引擎，低延迟同步</p></div>
+                        <div class="tech-card"><i class="fas fa-volume-up"></i><h3>空间音频</h3><p>3D音效系统，沉浸式听觉体验</p></div>
+                        <div class="tech-card"><i class="fas fa-paint-brush"></i><h3>视觉设计</h3><p>PBR材质系统，真实光影效果</p></div>
+                    </div>
+                </div>
+                <div class="content-section">
+                    <h2>项目成果</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">主题展厅</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">艺术作品</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">注册用户</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.8</div>
+                            <div class="stat-label">用户评分</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="project-navigation">
+                <a href="project5.html" class="nav-prev"><i class="fas fa-arrow-left"></i><span>上一个项目</span></a>
+                <a href="project1.html" class="nav-next"><span>下一个项目</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 陈梓琦 · Designed & Built with ❤️</p>
+        </div>
+    </footer>
+    <script>
+        const thumbs = document.querySelectorAll('.thumb');
+        const mainImage = document.querySelector('.gallery-main img');
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                thumbs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const newSrc = this.querySelector('img').src;
+                if (mainImage) {
+                    mainImage.src = newSrc;
+                } else {
+                    const galleryMain = document.querySelector('.gallery-main');
+                    galleryMain.innerHTML = `<img src="${newSrc}" alt="项目图片">`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

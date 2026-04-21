@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化平台 | 陈梓琦 Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">CZ.</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">首页</a></li>
+                <li><a href="index.html#about" class="nav-link">关于</a></li>
+                <li><a href="index.html#portfolio" class="nav-link active">作品集</a></li>
+                <li><a href="index.html#contact" class="nav-link">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="project-detail">
+        <div class="container">
+            <div class="back-link">
+                <a href="index.html#portfolio"><i class="fas fa-arrow-left"></i><span>返回作品集</span></a>
+            </div>
+            <header class="project-header">
+                <div class="project-meta">
+                    <span class="category">Web开发</span>
+                    <span class="year">2025</span>
+                </div>
+                <h1 class="project-title">数据可视化平台</h1>
+                <p class="project-subtitle">交互式数据可视化平台，将复杂数据转化为直观美观的图表</p>
+                <div class="project-tech-stack">
+                    <span class="tech-tag">D3.js</span>
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">WebSocket</span>
+                </div>
+            </header>
+            <section class="project-gallery">
+                <div class="gallery-main">
+                    <img src="images/projects/project4/image1.jpg" alt="项目主图" onerror="this.parentElement.style.background='linear-gradient(135deg, #7BA7BC 0%, #C9A9A6 100%)'; this.style.display='none'">
+                </div>
+                <div class="gallery-thumbs">
+                    <div class="thumb active">
+                        <img src="images/projects/project4/image1.jpg" alt="缩略图1" onerror="this.parentElement.style.background='linear-gradient(135deg, #7BA7BC 0%, #C9A9A6 100%)'">
+                    </div>
+                    <div class="thumb">
+                        <img src="images/projects/project4/image2.jpg" alt="缩略图2" onerror="this.parentElement.style.background='linear-gradient(135deg, #C9A9A6 0%, #7BA7BC 100%)'">
+                    </div>
+                    <div class="thumb">
+                        <img src="images/projects/project4/image3.jpg" alt="缩略图3" onerror="this.parentElement.style.background='linear-gradient(135deg, #8FAE8A 0%, #7BA7BC 100%)'">
+                    </div>
+                </div>
+            </section>
+            <section class="project-content">
+                <div class="content-section">
+                    <h2>项目概述</h2>
+                    <p>这是一个功能强大的数据可视化平台，支持多种图表类型和交互方式。平台能够处理海量数据，通过直观的视觉呈现帮助用户快速发现数据中的规律和趋势。</p>
+                    <p>系统采用前后端分离架构，支持实时数据更新、多维度分析和自定义报表生成，适用于商业智能、科研数据分析等多个场景。</p>
+                </div>
+                <div class="content-section">
+                    <h2>核心功能</h2>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i><div><strong>多图表类型</strong><p>支持柱状图、折线图、饼图、散点图、热力图等20+图表类型</p></div></li>
+                        <li><i class="fas fa-check-circle"></i><div><strong>实时更新</strong><p>基于WebSocket的实时数据推送，毫秒级响应速度</p></div></li>
+                        <li><i class="fas fa-check-circle"></i><div><strong>交互分析</strong><p>缩放、筛选、钻取等交互操作，深入探索数据细节</p></div></li>
+                        <li><i class="fas fa-check-circle"></i><div><strong>自定义报表</strong><p>拖拽式报表设计器，一键生成专业分析报告</p></div></li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h2>技术架构</h2>
+                    <div class="tech-grid">
+                        <div class="tech-card"><i class="fas fa-chart-line"></i><h3>前端可视化</h3><p>D3.js + ECharts，Canvas/SVG渲染</p></div>
+                        <div class="tech-card"><i class="fas fa-laptop-code"></i><h3>前端框架</h3><p>Vue.js 3 + TypeScript，组件化开发</p></div>
+                        <div class="tech-card"><i class="fas fa-server"></i><h3>后端服务</h3><p>Node.js + Express，RESTful API</p></div>
+                        <div class="tech-card"><i class="fas fa-database"></i><h3>数据存储</h3><p>MongoDB + Redis，高性能数据查询</p></div>
+                    </div>
+                </div>
+            </section>
+            <div class="project-navigation">
+                <a href="project3.html" class="nav-prev"><i class="fas fa-arrow-left"></i><span>上一个项目</span></a>
+                <a href="project5.html" class="nav-next"><span>下一个项目</span><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 陈梓琦 · Designed & Built with ❤️</p>
+        </div>
+    </footer>
+    <script>
+        const thumbs = document.querySelectorAll('.thumb');
+        const mainImage = document.querySelector('.gallery-main img');
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                thumbs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const newSrc = this.querySelector('img').src;
+                if (mainImage) {
+                    mainImage.src = newSrc;
+                } else {
+                    const galleryMain = document.querySelector('.gallery-main');
+                    galleryMain.innerHTML = `<img src="${newSrc}" alt="项目图片">`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
