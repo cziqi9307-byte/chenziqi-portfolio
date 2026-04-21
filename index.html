@@ -3,217 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陈梓琦 | Chen Ziqi - Creative Portfolio</title>
+    <title>陈梓琦 | Chen Ziqi - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Grainy Texture Overlay -->
-    <div class="grain-overlay"></div>
+    <div class="bg-gradient"></div>
+    <div class="particles" id="particles"></div>
 
-    <!-- Floating Shapes -->
-    <div class="floating-shape shape-1"></div>
-    <div class="floating-shape shape-2"></div>
-    <div class="floating-shape shape-3"></div>
-
-    <!-- Navigation -->
-    <nav class="back-nav">
-        <a href="#home" class="nav-logo">CZ.</a>
-        <ul class="nav-links">
-            <li><a href="#about">关于</a></li>
-            <li><a href="#works">作品</a></li>
-            <li><a href="#contact">联系</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">CZ.</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#about" class="nav-link">关于</a></li>
+                <li><a href="#portfolio" class="nav-link">作品集</a></li>
+                <li><a href="#contact" class="nav-link">联系</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="avatar-container reveal">
-                <div class="avatar-frame">
-                    <img src="images/avatar.jpg" alt="陈梓琦" class="avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22350%22%3E%3Crect fill=%22%237BA7BC%22 width=%22280%22 height=%22350%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2260%22%3E陈%3C/text%3E%3C/svg%3E'">
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="profile-area">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-ring"></div>
+                        <img src="images/avatar.jpg" alt="陈梓琦" class="profile-avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Cdefs%3E%3ClinearGradient id=%22grad%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%237BA7BC;stop-opacity:1%22 /%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%238FAE8A;stop-opacity:1%22 /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx=%22150%22 cy=%22150%22 r=%22150%22 fill=%22url(%23grad)%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2280%22 font-family=%22serif%22%3E陈%3C/text%3E%3C/svg%3E'">
+                        <div class="status-indicator">
+                            <span class="pulse-dot"></span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="intro reveal">
-                <div class="name-tag">HELLO, I'M</div>
-                <h1 class="main-name">陈梓琦</h1>
-                <p class="subtitle">Chen Ziqi · 数字游民 / 代码诗人</p>
                 
-                <div class="bio-text">
-                    热爱用代码编织梦境，在逻辑与创意之间寻找平衡点。<br><br>
-                    喜欢深夜写bug，清晨改bug，周而复始，乐此不疲。<br><br>
-                    相信技术应该像诗一样优雅，像咖啡一样温暖。☕
-                </div>
-
-                <div class="easter-egg">
-                    🎯 提示：试试点击上面的文字，或者把鼠标悬停在名字上~
+                <div class="hero-text">
+                    <div class="greeting">你好，我是</div>
+                    <h1 class="hero-name">
+                        <span class="name-cn">陈梓琦</span>
+                        <span class="name-en">Chen Ziqi</span>
+                    </h1>
+                    <p class="hero-title">创意技术专家 · 数字创作者</p>
+                    <p class="hero-description">
+                        在技术与艺术的交汇处探索无限可能<br>
+                        用代码编织梦想，以设计诠释美学
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <span>查看作品</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>联系我</span>
+                        </a>
+                    </div>
+                    
+                    <div class="scroll-indicator">
+                        <span>向下滚动</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="section-container">
-            <h2 class="section-title reveal">关于我</h2>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">关于我</h2>
+                <div class="title-decoration"></div>
+            </div>
             
             <div class="about-content">
-                <div class="about-text reveal">
-                    <p>我是一名创意技术专家，专注于嵌入式系统、物联网和创意编程。喜欢在技术与艺术的交汇处探索无限可能。</p>
-                    <p>从硬件到软件，从概念到实现，我享受将想法变为现实的整个过程。每一个项目都是一次新的冒险，每一行代码都是一首诗。</p>
+                <div class="about-text">
+                    <p class="lead-text">
+                        我是一名热爱创新的创意技术专家，专注于将前沿技术与艺术设计完美融合。
+                    </p>
+                    <p>
+                        从嵌入式系统到物联网应用，从创意编程到交互设计，我享受每一个将想法变为现实的过程。我相信技术应该是有温度的，设计应该是有力量的。
+                    </p>
+                    <p>
+                        在这个数字时代，我致力于创造既有技术深度又有艺术美感的作品，让科技更好地服务于人类生活。
+                    </p>
                 </div>
-
-                <div class="skills-grid reveal">
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-microchip"></i></div>
-                        <div class="skill-name">嵌入式系统</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-wifi"></i></div>
-                        <div class="skill-name">IoT 开发</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-code"></i></div>
-                        <div class="skill-name">创意编程</div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon"><i class="fas fa-cube"></i></div>
-                        <div class="skill-name">3D 设计</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Works Section -->
-    <section id="works" class="works-section">
-        <div class="section-container">
-            <h2 class="section-title reveal">精选作品</h2>
-            
-            <div class="works-grid">
-                <article class="work-card reveal">
-                    <div class="work-image-wrapper">
-                        <img src="images/projects/project1.jpg" alt="智能物联网机器人" class="work-image" onerror="this.style.background='linear-gradient(135deg, #8FAE8A 0%, #7BA7BC 100%)'">
-                    </div>
-                    <div class="work-content">
-                        <h3 class="work-title">智能物联网机器人</h3>
-                        <p class="work-desc">结合ESP32和传感器的智能家居控制系统，支持语音控制和远程监控。</p>
-                        <div class="work-tags">
-                            <span class="tag">IoT</span>
-                            <span class="tag">Arduino</span>
-                            <span class="tag">Python</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="work-card reveal">
-                    <div class="work-image-wrapper">
-                        <img src="images/projects/project2.jpg" alt="情感交互装置" class="work-image" onerror="this.style.background='linear-gradient(135deg, #7BA7BC 0%, #C9A9A6 100%)'">
-                    </div>
-                    <div class="work-content">
-                        <h3 class="work-title">情感交互装置</h3>
-                        <p class="work-desc">通过面部识别和LED矩阵实现的情感表达艺术装置。</p>
-                        <div class="work-tags">
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">Art</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="work-card reveal">
-                    <div class="work-image-wrapper">
-                        <img src="images/projects/project3.jpg" alt="3D打印创新设计" class="work-image" onerror="this.style.background='linear-gradient(135deg, #C9A9A6 0%, #8FAE8A 100%)'">
-                    </div>
-                    <div class="work-content">
-                        <h3 class="work-title">3D打印创新设计</h3>
-                        <p class="work-desc">参数化设计的可变形结构，探索增材制造的可能性。</p>
-                        <div class="work-tags">
-                            <span class="tag">3D Printing</span>
-                            <span class="tag">CAD</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quote Section -->
-    <section class="quote-section reveal">
-        <blockquote class="quote-text">
-            代码是写给机器的情书，<br>
-            而bug是它调皮的回信。
-        </blockquote>
-        <p class="quote-author">— 某位不愿透露姓名的程序员</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="section-container">
-            <h2 class="section-title reveal">联系我</h2>
-            
-            <div class="contact-content reveal">
-                <p class="contact-text">
-                    有有趣的项目想法？或者只是想聊聊天？<br>
-                    欢迎随时联系我！
-                </p>
                 
-                <div class="social-links">
-                    <a href="mailto:your-email@example.com" class="social-link" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://github.com/cziqi9307-byte" class="social-link" title="GitHub" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="social-link" title="WeChat">
-                        <i class="fab fa-weixin"></i>
-                    </a>
-                    <a href="#" class="social-link" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
+                <div class="skills-showcase">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> 技术开发</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Arduino</span>
+                            <span class="skill-tag">ESP32</span>
+                            <span class="skill-tag">React</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-palette"></i> 创意设计</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">UI/UX</span>
+                            <span class="skill-tag">3D建模</span>
+                            <span class="skill-tag">交互设计</span>
+                            <span class="skill-tag">视觉艺术</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-microchip"></i> 硬件开发</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">IoT</span>
+                            <span class="skill-tag">传感器</span>
+                            <span class="skill-tag">3D打印</span>
+                            <span class="skill-tag">电路设计</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p class="footer-text">© 2026 陈梓琦 · Made with ☕ and 💻</p>
-        <p class="footer-hint">滚动页面发现更多惊喜 ✨</p>
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">精选作品</h2>
+                <div class="title-decoration"></div>
+            </div>
+            
+            <div class="portfolio-grid">
+                <article class="portfolio-card">
+                    <div class="card-image">
+                        <img src="images/projects/project1.jpg" alt="智能物联网机器人" onerror="this.parentElement.style.background='linear-gradient(135deg, #7BA7BC 0%, #8FAE8A 100%)'">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <span class="view-project">查看详情</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="category">IoT</span>
+                            <span class="year">2026</span>
+                        </div>
+                        <h3 class="card-title">智能物联网机器人</h3>
+                        <p class="card-description">
+                            结合ESP32和多种传感器的智能家居控制系统，支持语音控制、远程监控和自动化场景。通过手机App实现全屋智能设备的统一管理和智能联动。
+                        </p>
+                        <div class="card-tech">
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MQTT</span>
+                            <span class="tech-tag">React Native</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="card-image">
+                        <img src="images/projects/project2.jpg" alt="情感交互装置" onerror="this.parentElement.style.background='linear-gradient(135deg, #8FAE8A 0%, #C9A9A6 100%)'">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <span class="view-project">查看详情</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="category">交互艺术</span>
+                            <span class="year">2026</span>
+                        </div>
+                        <h3 class="card-title">情感交互装置</h3>
+                        <p class="card-description">
+                            通过面部识别技术和LED矩阵实现的情感表达艺术装置。能够实时捕捉观众的情绪变化，并通过光影和色彩的变化做出回应，创造人与科技的诗意对话。
+                        </p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">LED Matrix</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="card-image">
+                        <img src="images/projects/project3.jpg" alt="3D打印创新设计" onerror="this.parentElement.style.background='linear-gradient(135deg, #C9A9A6 0%, #7BA7BC 100%)'">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <span class="view-project">查看详情</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="category">产品设计</span>
+                            <span class="year">2025</span>
+                        </div>
+                        <h3 class="card-title">3D打印创新设计</h3>
+                        <p class="card-description">
+                            参数化设计的可变形结构系列，探索增材制造在设计领域的无限可能性。结合算法生成独特形态，每个作品都是数学之美与工艺之精的完美呈现。
+                        </p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Grasshopper</span>
+                            <span class="tech-tag">Fusion 360</span>
+                            <span class="tech-tag">3D Printing</span>
+                            <span class="tech-tag">Parametric Design</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="card-image">
+                        <img src="images/projects/project4.jpg" alt="数据可视化平台" onerror="this.parentElement.style.background='linear-gradient(135deg, #7BA7BC 0%, #C9A9A6 100%)'">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <span class="view-project">查看详情</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="category">Web开发</span>
+                            <span class="year">2025</span>
+                        </div>
+                        <h3 class="card-title">数据可视化平台</h3>
+                        <p class="card-description">
+                            交互式数据可视化平台，将复杂的数据转化为直观、美观的图表和图形。支持实时数据更新、多维度分析和自定义报表生成，帮助用户快速洞察数据价值。
+                        </p>
+                        <div class="card-tech">
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="card-image">
+                        <img src="images/projects/project5.jpg" alt="可穿戴设备" onerror="this.parentElement.style.background='linear-gradient(135deg, #8FAE8A 0%, #7BA7BC 100%)'">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <span class="view-project">查看详情</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="category">可穿戴技术</span>
+                            <span class="year">2025</span>
+                        </div>
+                        <h3 class="card-title">智能健康监测手环</h3>
+                        <p class="card-description">
+                            集成了心率监测、血氧检测、运动追踪等多功能的智能手环。采用低功耗设计，续航可达7天，配合专属App提供健康数据分析和建议。
+                        </p>
+                        <div class="card-tech">
+                            <span class="tech-tag">BLE</span>
+                            <span class="tech-tag">Sensor Fusion</span>
+                            <span class="tech-tag">Low Power</span>
+                            <span class="tech-tag">Mobile App</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="card-image">
+                        <img src="images/projects/project6.jpg" alt="虚拟现实体验" onerror="this.parentElement.style.background='linear-gradient(135deg, #C9A9A6 0%, #8FAE8A 100%)'">
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <span class="view-project">查看详情</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="category">VR/AR</span>
+                            <span class="year">2024</span>
+                        </div>
+                        <h3 class="card-title">沉浸式虚拟展览</h3>
+                        <p class="card-description">
+                            基于VR技术的虚拟艺术展览平台，用户可以在虚拟空间中欣赏艺术作品，与其他参观者互动。支持多人在线、语音交流和作品详情展示。
+                        </p>
+                        <div class="card-tech">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">VR SDK</span>
+                            <span class="tech-tag">Multiplayer</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">联系我</h2>
+                <div class="title-decoration"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        有有趣的项目想法？或者只是想聊聊天？<br>
+                        欢迎随时与我联系！
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>your-email@example.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>中国 · 上海</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="mailto:your-email@example.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://github.com/cziqi9307-byte" class="social-link" title="GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="WeChat">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2026 陈梓琦 · Designed & Built with ❤️</p>
+        </div>
     </footer>
 
     <script>
-        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observerOptions = { 
+            threshold: 0.1, 
+            rootMargin: '0px 0px -100px 0px' 
+        };
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        document.querySelectorAll('.portfolio-card, .about-content, .contact-content').forEach(el => {
+            observer.observe(el);
+        });
 
-        const bioText = document.querySelector('.bio-text');
-        let clickCount = 0;
-        bioText.addEventListener('click', () => {
-            clickCount++;
-            if (clickCount === 5) {
-                alert('🎉 恭喜你发现了彩蛋！\n\n"人生就像编程，充满了未知的bug和意外的惊喜。"');
-                clickCount = 0;
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
         });
-
-        document.querySelectorAll('.floating-shape').forEach(shape => {
-            shape.style.animationDelay = Math.random() * 5 + 's';
-        });
-
-        document.documentElement.style.scrollBehavior = 'smooth';
-
-        const mainName = document.querySelector('.main-name');
-        mainName.addEventListener('mouseenter', () => mainName.style.transform = 'scale(1.05)');
-        mainName.addEventListener('mouseleave', () => mainName.style.transform = 'scale(1)');
     </script>
 </body>
 </html>
